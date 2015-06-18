@@ -14,7 +14,7 @@ Visual Studio Community 僅供個人開發、學術研究、學生、或研究�
 
 議程 | 時間 | 教材
 ---- | ---- | ---- 
-**0.** Universal Windows Platform 簡介、開發工具操作 | 50 分鐘 | 投影片 
+**0.** Universal Windows Platform 簡介、開發工具操作 | 30 分鐘 | [投影片](Presentation/0_Introduction/0_IntroToUWP.pptx)
 **1.** 使用 XAML 設計介面、導覽、佈局及控制項 | 50 分鐘 | 投影片
 _Lab 1: 熟悉開發工具並設計圖片顯示器_ | 30 分鐘 | 操作手冊
 **2.** 瞭解 XAML 資料繫結及自適應設計 | 50 分鐘 | 投影片
