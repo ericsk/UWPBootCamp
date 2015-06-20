@@ -25,44 +25,44 @@
 
 在方案總管中點兩下開啟 **MainPage.xaml** 檔案，然後將下面的程式碼貼在 MainPage.xaml 中：
 
-    ```xml
-    <Page
-        x:Class="CurrencyConverter.MainPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:CurrencyConverter"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d">
+```xml
+<Page
+    x:Class="CurrencyConverter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CurrencyConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="12,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="12,24">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100" />
-                <ColumnDefinition Width="150" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            
-            <TextBlock Text="美金" Grid.Row="0" Grid.Column="0" 
-                       HorizontalAlignment="Right" VerticalAlignment="Center" />
-            <TextBox x:Name="USD" Grid.Row="0" Grid.Column="1" Margin="5,10" />
-            
-            <TextBlock Text="新台幣" Grid.Row="1" Grid.Column="0" 
-                       HorizontalAlignment="Right" VerticalAlignment="Center" />
-            <TextBox x:Name="TWD" Grid.Row="1" Grid.Column="1" 
-                     Margin="5,10" IsReadOnly="True"/>
-                     
-            <Button x:Name="ConvertButton" Grid.Row="2" Grid.Column="1" 
-                    Content="轉換" Margin="5,10" Click="OnConvertButtonClick" />
-        </Grid>
-    </Page>
-    ```
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Text="美金" Grid.Row="0" Grid.Column="0" 
+                   HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <TextBox x:Name="USD" Grid.Row="0" Grid.Column="1" Margin="5,10" />
+        
+        <TextBlock Text="新台幣" Grid.Row="1" Grid.Column="0" 
+                   HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <TextBox x:Name="TWD" Grid.Row="1" Grid.Column="1" 
+                 Margin="5,10" IsReadOnly="True"/>
+                 
+        <Button x:Name="ConvertButton" Grid.Row="2" Grid.Column="1" 
+                Content="轉換" Margin="5,10" Click="OnConvertButtonClick" />
+    </Grid>
+</Page>
+```
 
 貼上程式碼並儲存後，我們可以看到設計視窗中就會立刻呈現這個介面的樣子。
 
@@ -86,33 +86,33 @@
 
 打開 code behind 的檔案後，將下列的程式碼貼上：
 
-    ```csharp
-    namespace CurrencyConverter
+```csharp
+namespace CurrencyConverter
+{
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    
+    public sealed partial class MainPage : Page
     {
-        using Windows.UI.Xaml;
-        using Windows.UI.Xaml.Controls;
+        const double RATE = 31.0;
         
-        public sealed partial class MainPage : Page
+        public MainPage()
         {
-            const double RATE = 31.0;
+            InitializeComponent();
+        }
+        
+        private void OnConvertButtonClick(object sender, RoutedEventArgs args)
+        {
+            double usd;
             
-            public MainPage()
+            if (double.TryParse(USD.Text, out usd))
             {
-                InitializeComponent();
-            }
-            
-            private void OnConvertButtonClick(object sender, RoutedEventArgs args)
-            {
-                double usd;
-                
-                if (double.TryParse(USD.Text, out usd))
-                {
-                    TWD.Text = (usd * RATE).ToString();
-                }
+                TWD.Text = (usd * RATE).ToString();
             }
         }
     }
-    ```
+}
+```
 
 這段程式碼的重點就是在按下畫面上的轉換按鈕後，根據 XAML 上的設定會呼叫 ```OnConvertButtonClick``` 的函式，接下來就只是一個簡單的數字轉換的工作而已。
 
