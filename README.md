@@ -3,7 +3,7 @@
 Universal Windows Platform (UWP) 基礎開發訓練營的投影片以及 Lab 教材，本教材目前以 C# 程式語言為主，內容為基礎的 UWP app 開發簡介。
 
 ## 建議安裝環境
-* 作業系統：**Windows 10** （目前可加入 [Windows 測試人員計劃](https://insider.windows.com/) 免費取得）。
+* 作業系統：**Windows 10** （擁有合法授權使用 Windows 7/8/8.1 的用戶可以免費升級，若無 Windows 作業系統可以下載[ Windows 10 企業評估版](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)免費試用 90 天）。
 * 開發工具：**Visual Studio 2015 Community**，可至 [Visual Studio 官網](http://visualstudio.com/)免費取得。
 
 ### 注意事項
