@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="BMI_Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BMI_Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="150" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="150" />
+      <ColumnDefinition Width="300" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="BMI 計算機" Style="{StaticResource HeaderTextBlockStyle}"
+               VerticalAlignment="Center" Margin="20,0"/>
+    
+    <!-- 身高 -->
+    <TextBlock Grid.Row="1" Grid.Column="0" Text="身高:" HorizontalAlignment="Right" 
+               Style="{StaticResource BodyTextBlockStyle}" Margin="10,5" VerticalAlignment="Center" />
+    <TextBox x:Name="Height" Grid.Row="1" Grid.Column="1" Margin="10,5" InputScope="Number" />
+
+    <!-- 體重 -->
+    <TextBlock Grid.Row="2" Grid.Column="0" Text="體重:" HorizontalAlignment="Right" 
+               Style="{StaticResource BodyTextBlockStyle}" Margin="10,5" VerticalAlignment="Center"/>
+    <TextBox x:Name="Weight" Grid.Row="2" Grid.Column="1" Margin="10,5" InputScope="Number" />
+
+    <Button Grid.Row="3" Grid.Column="1" Margin="10,5" Content="計算" Click="OnCalculateButtonClicked" />
+
+    <!-- 結果 -->
+    <TextBlock Grid.Row="4" Grid.Column="0" Text="結果:" HorizontalAlignment="Right" 
+               Style="{StaticResource BodyTextBlockStyle}" Margin="10,5" VerticalAlignment="Center" />
+    <TextBlock x:Name="BMIResult" Grid.Row="4" Grid.Column="1" Margin="10,5" Style="{StaticResource TitleTextBlockStyle}"/>
+  </Grid>
+</Page>
