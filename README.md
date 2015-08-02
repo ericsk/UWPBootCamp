@@ -20,7 +20,7 @@ _Lab 1: 熟悉開發工具並設計匯率轉換器_ | 30 分鐘 | [操作手冊]
 **2.** 瞭解 XAML 資料繫結與控制項範本 | 50 分鐘 | [投影片](Presentation/2_XAML_Data_Binding/XAML Data Binding.pptx)
 _Lab 2: 設計圖片瀏覽器_ | 30 分鐘 | [操作手冊](HOL/HOL2_Image_Viewer.md)
 **3.** 檔案處理及 SQLite 資料庫 | 50 分鐘 | [投影片](Presentation/3_Storage_SQLite/Storage_and_SQLite.pptx)
-_Lab 3: 為圖片瀏覽器加入設定頁面_ | 30 分鐘 | 操作手冊
+_Lab 3: 讀取本地端圖片_ | 30 分鐘 | [操作手冊](HOL/HOL3_Local_Image_Viewer.md)
 **4.** 背景執行、動態磚與通知 | 50 分鐘 | [投影片](Presentation/4_Background_Tile_Toast/Background_Tile_Toast.pptx)
 _Lab 4: 背景下載圖片_ | 30 分鐘 | 操作手冊
 **5.** 側載及發佈應用程式 | 30 分鐘 | 投影片
