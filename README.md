@@ -18,7 +18,7 @@ Visual Studio Community 僅供個人開發、學術研究、學生、或研究�
 **1.** 使用 XAML 設計介面、導覽、佈局及控制項 | 50 分鐘 | [投影片](Presentation/1_XAML_Controls/XAML Controls.pptx)
 _Lab 1: 熟悉開發工具並設計匯率轉換器_ | 30 分鐘 | [操作手冊](HOL/HOL1_Tooling_and_Currency_Converter.md) [專案範例](Projects/HOL1-CurrencyConverter)
 **2.** 瞭解 XAML 資料繫結與控制項範本 | 50 分鐘 | [投影片](Presentation/2_XAML_Data_Binding/XAML Data Binding.pptx)
-_Lab 2: 設計圖片瀏覽器_ | 30 分鐘 | 操作手冊
+_Lab 2: 設計圖片瀏覽器_ | 30 分鐘 | [操作手冊](HOL/HOL2_Image_Viewer.md)
 **3.** 檔案處理及 SQLite 資料庫 | 50 分鐘 | [投影片](Presentation/3_Storage_SQLite/Storage_and_SQLite.pptx)
 _Lab 3: 為圖片瀏覽器加入設定頁面_ | 30 分鐘 | 操作手冊
 **4.** 背景執行、動態磚與通知 | 50 分鐘 | [投影片](Presentation/4_Background_Tile_Toast/Background_Tile_Toast.pptx)
